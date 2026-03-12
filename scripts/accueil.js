@@ -143,7 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Console ASCII Art
     console.log(`
     ╔═══════════════════════════════════════╗
-    ║   CYBERPUNK PORTFOLIO INITIALIZED    ║
     ║   STATUS: ONLINE                     ║
     ║   SYSTEM: OPERATIONAL                ║
     ╚═══════════════════════════════════════╝

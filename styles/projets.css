@@ -87,6 +87,29 @@ body {
     display: inline-block;
 }
 
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    animation: glitch-1 2s infinite;
+    color: var(--neon-pink);
+    z-index: -1;
+}
+
+.glitch::after {
+    animation: glitch-2 3s infinite;
+    color: var(--neon-purple);
+    z-index: -2;
+}
+
 .nav-links {
     display: flex;
     list-style: none;

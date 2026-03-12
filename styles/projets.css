@@ -505,3 +505,89 @@ body {
         font-size: 0.9rem;
     }
 }
+
+/* Modal PDF */
+.pdf-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.pdf-modal-overlay.active {
+    display: flex;
+}
+
+.pdf-modal-box {
+    background: var(--darker-bg);
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 40px rgba(0, 243, 255, 0.6), inset 0 0 30px rgba(0, 243, 255, 0.05);
+    padding: 2.5rem 3rem;
+    max-width: 440px;
+    width: 90%;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+    animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+    padding-bottom: 1rem;
+}
+
+.pdf-modal-icon {
+    font-size: 1.6rem;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.pdf-modal-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.pdf-modal-message {
+    font-size: 1.15rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.pdf-modal-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 0.75rem 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    cursor: pointer;
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+    transition: all 0.3s ease;
+}
+
+.pdf-modal-btn:hover {
+    background: var(--neon-cyan);
+    color: var(--darker-bg);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+}

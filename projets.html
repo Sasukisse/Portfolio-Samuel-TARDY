@@ -30,7 +30,7 @@
                 <span class="glitch-text" data-text="MES PROJETS">MES PROJETS</span>
                 <span class="title-bracket">]</span>
             </h1>
-            <p class="page-subtitle">Découvrez mes réalisations technologiques</p>
+            <p class="page-subtitle">Découvrez mes réalisations</p>
         </header>
 
         <div class="projects-filter">
@@ -118,7 +118,7 @@
                         <span class="placeholder-icon">🔧</span>
                     </div>
                     <div class="card-overlay">
-                        <a href="#" onclick="alert('Veuillez ajouter le PDF dans le dossier du projet'); return false;" class="view-project">VOIR LE PROJET &gt;</a>
+                        <a href="#" onclick="showPdfModal(); return false;" class="view-project">VOIR LE PROJET &gt;</a>
                     </div>
                 </div>
                 <div class="card-content">
@@ -150,6 +150,18 @@
     <footer class="cyber-footer">
         <p>&copy; 2026 Samuel TARDY - Tous droits réservés</p>
     </footer>
+
+    <!-- Modal PDF -->
+    <div id="pdf-modal" class="pdf-modal-overlay" onclick="closePdfModal()">
+        <div class="pdf-modal-box" onclick="event.stopPropagation()">
+            <div class="pdf-modal-header">
+                <span class="pdf-modal-icon">&#9888;</span>
+                <span class="pdf-modal-title">INFORMATION SYSTÈME</span>
+            </div>
+            <p class="pdf-modal-message">Le PDF n'est pas encore disponible.</p>
+            <button class="pdf-modal-btn" onclick="closePdfModal()">OK</button>
+        </div>
+    </div>
 
     <script src="scripts/projets.js"></script>
 </body>

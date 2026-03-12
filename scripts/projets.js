@@ -203,3 +203,11 @@ console.log(`
 ║   PARTICLES: ENABLED                 ║
 ╚═══════════════════════════════════════╝
 `);
+
+function showPdfModal() {
+    document.getElementById('pdf-modal').classList.add('active');
+}
+
+function closePdfModal() {
+    document.getElementById('pdf-modal').classList.remove('active');
+}
